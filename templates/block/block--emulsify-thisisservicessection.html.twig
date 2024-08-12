@@ -1,0 +1,32 @@
+{% set service_cards = [] %}
+{% set main_heading = content["field_services_heading"]%}
+{% set main_subheading = content["field_services_detail"] %}
+
+
+{% for item in content["field_service_content"]["#items"] %}
+    {% set paragra = item.entity %}
+    {% set title = paragra.field_service_title.value %}
+    {% set body = paragra.field_service_body.value %}
+    {% set icon = paragra.field_service_icon.value %}
+
+
+    {% set service_cards = service_cards|merge(
+        [
+           { 
+                'heading': title,
+                'paragraph': body,
+                'icon': icon,
+            }
+        ]
+    ) %}            
+{% endfor %}
+
+{% include "@organisms/service/service.twig" with {
+    'block_heading': main_heading,
+    'block_subheading': main_subheading,
+    'items': service_cards
+} %}
+      
+
+
+

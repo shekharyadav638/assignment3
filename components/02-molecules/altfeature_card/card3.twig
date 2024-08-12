@@ -1,0 +1,24 @@
+ <div class="icon_feature">
+  {% if icon_src %}
+  {% include "@atoms/images/icons/_icon.twig" with { 
+    icon_src: icon_src
+  }%}
+{% endif %}
+ </div>
+
+<div class="feature_body">
+    {% if card__subheading %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: '4',
+        heading: card__subheading,
+      } %}
+    {% endif %}
+
+    {% if card__body %}
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_content: card__body,
+      } %}
+    {% endif %}
+</div>
+
+

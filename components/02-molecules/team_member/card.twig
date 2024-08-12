@@ -1,0 +1,26 @@
+<div class="member">
+  <div class="member-img">
+    {% include "@atoms/images/image/_image.twig" with {
+      image_src: img_src,
+      image_alt: img_alt
+    }%}
+    <div class="social">
+      <a href=""><i class="bi bi-twitter"></i></a>
+      <a href=""><i class="bi bi-facebook"></i></a>
+      <a href=""><i class="bi bi-instagram"></i></a>
+      <a href=""><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+  <div class="member-info text-center">
+    {% include "@atoms/text/headings/_heading.twig" with {
+      'heading': heading_content,
+      'heading_level': '4',
+    }%}
+    <span>{{job_role}}</span>
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_content: card__body,
+    }%}
+  </div>
+  
+  
+</div>

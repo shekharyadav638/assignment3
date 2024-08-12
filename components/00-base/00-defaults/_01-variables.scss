@@ -1,0 +1,71 @@
+/*
+ * General Variables
+ * Note: colors should go into
+ * components/00-base/01-colors/_color-vars.css
+ * and breakpoint related vars into
+ * components/00-base/base/_breakpoints.css
+*/
+
+$default-font:
+  'Open Sans',
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  'Liberation Sans',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji';
+$heading-font: 'Roboto', sans-serif;
+$nav-font: 'Poppins', sans-serif;
+
+// Fonts
+$font-body:
+  'Roboto',
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  'Liberation Sans',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji';
+$font-heading: 'Nunito', sans-serif;
+
+// Spacing
+$space: 1rem;
+
+// Times
+$space-double: calc($space * 2);
+$space-triple: calc($space * 3);
+$space-quadruple: calc($space * 4);
+$space-quintuple: calc($space * 5);
+$space-sextuple: calc($space * 6);
+$space-septuple: calc($space * 7);
+
+// Divided
+$space-one-half: calc($space / 2);
+$space-one-third: calc($space / 3);
+$space-one-fourth: calc($space / 4);
+$space-one-fifth: calc($space / 5);
+$space-one-sixth: calc($space / 6);
+$space-one-seventh: calc($space / 7);
+$space-one-eighth: calc($space / 8);
+
+/*
+ * Use this on the outer wrapper of page-level elements.
+ * It ensures consistent spacing between elements on the page.
+ */
+@mixin space-stack-page {
+  margin-bottom: $space-double;
+}

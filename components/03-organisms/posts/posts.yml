@@ -1,0 +1,21 @@
+items:
+  - image: 'https://bootstrapmade.com/demo/templates/FlexStart/assets/img/blog/blog-1.jpg'
+    body: 'Eum ad dolor et. Autem aut fugiat debitis'
+    name: 'Julia Parker'
+    topic: 'Politics'
+    date: 'DECEMBER 12'
+
+  - image: 'https://bootstrapmade.com/demo/templates/FlexStart/assets/img/blog/blog-2.jpg'
+    body: 'Et repellendus molestiae qui est sed omnis'
+    name: 'Mario Douglas'
+    topic: 'Sports'
+    date: 'JULY 17'
+
+  - image: 'https://bootstrapmade.com/demo/templates/FlexStart/assets/img/blog/blog-3.jpg'
+    body: 'Eum ad dolor et. Autem aut fugiat debitis'
+    name: 'Lisa Hunter'
+    topic: 'Economics'
+    date: 'SEPTEMBER 05'
+
+card_heading: 'Recent Blog Posts'
+body: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'

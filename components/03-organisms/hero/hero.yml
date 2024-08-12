@@ -1,0 +1,15 @@
+hero_card_heading: 'Welcome to UpConstruction'
+hero_card_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+  aliquip ex ea commodo consequat.'
+hero_card_btn_text: 'Get Started'
+hero_card_btn_url: '#'
+hero_card_btn_class: 'btn--primary'
+
+images:
+  - src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/hero-carousel/hero-carousel-1.jpg'
+  - src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/hero-carousel/hero-carousel-2.jpg'
+  - src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/hero-carousel/hero-carousel-3.jpg'
+  - src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/hero-carousel/hero-carousel-4.jpg'
+  - src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/hero-carousel/hero-carousel-5.jpg'

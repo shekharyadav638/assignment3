@@ -1,0 +1,5 @@
+button__content: 'Button atom'
+button_url: '#'
+button_modifiers:
+  primary: 'btn--primary'
+  secondary: 'btn--secondary'

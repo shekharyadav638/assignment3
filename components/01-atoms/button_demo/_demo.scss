@@ -1,0 +1,32 @@
+.btn {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+
+  &--primary {
+    border: 2px solid #feb900;
+    &:hover {
+      background: #feb900;
+      transition: 0.3s;
+    }
+  }
+
+  &--secondary {
+    background: #feb900;
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 4px;
+    &:hover {
+      background: #ffc934;
+      transition: 0.3s;
+    }
+  }
+}

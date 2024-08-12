@@ -1,0 +1,46 @@
+.our-story {
+  padding: 40px;
+  background-color: color-mix(in srgb, #364d59, transparent 96%);
+  @media (min-width: 991px) {
+    padding-right: 35%;
+  }
+
+  & h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: color-mix(in srgb, #364d59, transparent 50%);
+  }
+  & h5 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: color-mix(in srgb, #364d59, transparent 20%);
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0;
+    & li {
+      padding-top: 10px;
+      color: #364d59;
+      & i {
+        font-size: 20px;
+        padding-right: 4px;
+        color: #feb900;
+      }
+    }
+  }
+
+  .watch-video {
+    & i {
+      font-size: 2rem;
+      transition: 0.3s;
+      color: #feb900;
+    }
+    & a {
+      font-weight: 600;
+      color: color-mix(in srgb, #364d59, transparent 20%);
+      margin-left: 8px;
+      transition: 0.3s;
+    }
+  }
+}

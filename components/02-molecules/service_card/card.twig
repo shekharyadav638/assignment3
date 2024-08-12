@@ -1,0 +1,19 @@
+<div class = "service_card">
+    <div class="service_card_icon">
+        {% include "@atoms/images/icons/_icon.twig" with {
+            icon: icon_src
+        } %} 
+    </div>
+    {% include "@atoms/text/headings/_heading.twig" with {
+        'heading': heading_content,
+        'heading_level': '3',
+    } %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+        'paragraph_content': paragraph,
+    } %} 
+    {% include "@atoms/links/link/link.twig" with {
+        link_url: '#',
+        link_content: link,
+        icon: 'bi bi-arrow-right'
+    } %}
+</div>

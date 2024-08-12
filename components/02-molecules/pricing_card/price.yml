@@ -1,0 +1,19 @@
+heading_content: 'Free Plan'
+heading_clr: ' #20c997'
+price_val: '50'
+icon_src: 'bi bi-box'
+icon_clr: '#20c997'
+
+lists:
+  - content: 'Aida dere'
+    add_class: ''
+  - content: 'Nec feugiat nisl'
+    add_class: ''
+  - content: 'Nulla at volutpat dola'
+    add_class: ''
+  - content: 'Pharetra massa'
+    add_class: 'na'
+  - content: 'Massa ultricies mi'
+    add_class: 'na'
+
+link_class: 'btn-buy'

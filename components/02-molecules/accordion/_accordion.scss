@@ -1,0 +1,28 @@
+.accordion {
+  & h3 {
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  & p {
+    font-style: italic !important;
+    color: #364d59;
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0;
+    & li {
+      padding-top: 10px;
+      color: #364d59;
+      & i {
+        font-size: 20px;
+        padding-right: 4px;
+        color: #feb900;
+      }
+    }
+  }
+}

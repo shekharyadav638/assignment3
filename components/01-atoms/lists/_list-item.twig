@@ -1,0 +1,16 @@
+{% set list__item__base_class = list__item__base_class|default('item') %}
+{% set list__item__attributes = list__item__attributes|default({}) %}
+{% set list__item__attributes = list__item__attributes|merge({
+  'class': bem(list__item__base_class, list__item__modifiers, list__item__blockname),
+}) %}
+
+<li  data-filter="{{filter}}" class="{{additional_class}}">
+  {% if icon_src %}
+    {% include "@atoms/images/icons/_icon.twig" with { 
+      icon_src: icon_src
+    }%}
+  {% endif %}
+  {% block list__item__content %}
+    {{ list__item__content }}
+  {% endblock %}
+</li>

@@ -1,0 +1,59 @@
+/*
+ * General Variables
+ * Note: colors should go into
+ * components/00-base/01-colors/_color-vars.css
+ * and breakpoint related vars into
+ * components/00-base/base/_breakpoints.css
+*/
+/*
+ * Use this on the outer wrapper of page-level elements.
+ * It ensures consistent spacing between elements on the page.
+ */
+.alert {
+  background-color: rgba( var(--c-warning, 255, 235, 10), 1 );
+  padding: 1rem;
+  color: rgba( var(--c-text, 24, 25, 27), 1 );
+}
+.alert[data-alert-type=emergency] {
+  background-color: rgba( var(--c-error, 185, 29, 66), 1 );
+}
+.alert[data-alert-type=marketing] {
+  background-color: rgba( var(--c-message, 17, 125, 98), 1 );
+}
+.alert[data-alert-state=dismissed] {
+  display: none;
+}
+
+[data-alert-state=collapsed] .alert__paragraph,
+[data-alert-state=collapsed] .alert__link {
+  display: none;
+}
+
+.alert__inner {
+  display: flex;
+  align-items: center;
+}
+
+.alert__icon {
+  display: flex;
+  margin-right: 1rem;
+}
+.alert__icon svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.alert__toggle {
+  display: flex;
+  margin-left: auto;
+  transform: rotate(180deg);
+  border: none;
+  background: none;
+}
+[data-alert-state=collapsed] .alert__toggle {
+  transform: rotate(0deg);
+}
+.alert__toggle svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}/*# sourceMappingURL=alert.css.map */

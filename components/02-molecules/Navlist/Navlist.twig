@@ -1,0 +1,12 @@
+<nav id="navlist" class="navbar">      
+    <div class="navbar_list">
+        {% for link in links %}
+            {% include "@atoms/links/link/link.twig" with {
+                link_url: link.link_url,
+                link_content: link.link_content,
+                icon: link.icon   
+            } %}
+        {% endfor %}
+    </div>
+    
+</nav>

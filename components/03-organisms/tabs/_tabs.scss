@@ -1,0 +1,26 @@
+.features {
+  .nav-link {
+    color: #52565e;
+    padding: 15px 0;
+    transition: 0.3s;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    border: 0;
+    border-bottom: 4px solid color-mix(in srgb, #364d59, transparent 90%);
+
+    & h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &.active {
+      background-color: #ffffff;
+      border-color: #feb900;
+    }
+  }
+}

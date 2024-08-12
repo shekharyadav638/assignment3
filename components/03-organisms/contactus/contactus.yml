@@ -1,0 +1,20 @@
+items:
+  - sub: 'Address'
+    address1: 'A108 Adam Street'
+    address2: 'New York, NY 535022'
+    src: 'bi bi-geo-alt'
+
+  - sub: 'Call Us'
+    address1: '+1 5589 55488 55'
+    address2: '+1 6678 254445 41'
+    src: 'bi bi-telephone'
+
+  - sub: 'Email Us'
+    address1: 'info@example.com'
+    address2: 'contact@example.com'
+    src: 'bi bi-envelope'
+
+  - sub: 'Open Hours'
+    address1: 'Monday - Friday'
+    address2: '9:00AM - 05:00PM'
+    src: 'bi bi-clock'

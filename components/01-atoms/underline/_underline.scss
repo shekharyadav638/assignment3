@@ -1,0 +1,18 @@
+.underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_1,
+  &_3 {
+    width: 50px;
+    height: 2px;
+    background-color: #4b4b4b;
+  }
+
+  &_2 {
+    width: 50px;
+    height: 4px;
+    background-color: #3b96b0;
+  }
+}

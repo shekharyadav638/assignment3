@@ -1,0 +1,30 @@
+<div class="pricingCard">
+    {% if feature_text %}
+        <span class="featured">{{feature_text}}</span>
+    {% endif %}
+
+    
+    <div class="price"><sup>$</sup>{{price_val}}<span> / mo</span></div>
+    <div class="icon_cla">
+        {% include "@atoms/images/icons/_icon.twig" with {
+            icon_src: icon_src,
+            iconColor: icon_clr
+        } %} 
+    </div>
+    <ul class="price_list">
+        {% for item in lists %}
+            {% include "@atoms/lists/_list-item.twig" with {
+                list__item__content: item.content,
+                additional_class: item.add_class
+            } %}
+        {% endfor %}
+    </ul>
+    {% include "@atoms/links/link/link.twig" with {
+        link_url: '#',
+        link_content: 'Buy Now',
+        link_color: '#4154f1',
+        add_class: link_class
+    } %} 
+</div>
+
+  

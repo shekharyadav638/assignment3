@@ -1,0 +1,23 @@
+heading: 'Testimonials'
+body: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'
+
+items:
+  - body: 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat '
+    image: 'https://bootstrapmade.com/demo/templates/FlexStart/assets/img/testimonials/testimonials-4.jpg'
+    name: 'Matt Brandon'
+    role: 'Enterprenuer'
+
+  - body: 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat '
+    image: 'https://bootstrapmade.com/demo/templates/FlexStart/assets/img/testimonials/testimonials-1.jpg'
+    name: 'Saul goodman'
+    role: 'CEO & Founder'
+
+  - body: 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat'
+    image: 'https://bootstrapmade.com/demo/templates/FlexStart/assets/img/testimonials/testimonials-2.jpg'
+    name: 'Sara Wilson'
+    role: 'Designer'
+
+  - body: 'Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat'
+    image: 'https://bootstrapmade.com/demo/templates/FlexStart/assets/img/testimonials/testimonials-3.jpg'
+    name: 'Jena Karlis'
+    role: 'Store Owner'

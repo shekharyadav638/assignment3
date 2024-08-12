@@ -1,0 +1,36 @@
+<div class = "nav">
+    <div class = "nav_title">
+        {% set header_title = 'ARSHA' %}
+         {% include "@atoms/links/link/link.twig" with {
+            'link_content':header_title
+         } %}  
+    </div>
+    <div class = "nav_menu">
+
+            {% include "@atoms/links/link/link.twig" with {
+                link_content:header_menu_1
+            } %}
+            {% include "@atoms/links/link/link.twig" with {
+                link_content:header_menu_2
+            } %}
+            {% include "@atoms/links/link/link.twig" with {
+                link_content:header_menu_3
+            } %}
+            {% include "@atoms/links/link/link.twig" with {
+                link_content:header_menu_4
+            } %}
+            {% include "@atoms/links/link/link.twig" with {
+                link_content:header_menu_5
+            } %}
+            {% include "@atoms/links/link/link.twig" with {
+                link_content:header_menu_6
+            } %}
+            
+            {% set btn_content = 'Get Started' %}
+            {% set button_modifier = 'btn--primary' %}
+            {% include "@atoms/button_demo/buttons.twig" with {
+                'button__content': btn_content, 
+                'button_modifiers': button_modifier
+            } %}
+    </div>
+</div>

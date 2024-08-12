@@ -1,0 +1,24 @@
+.slider-wrapper {
+  width: 116px !important;
+  margin-right: 120px;
+  align-items: center !important;
+  & img {
+    width: 116px;
+    transition: 0.3s;
+  }
+  &:hover {
+    & img {
+      opacity: 1 !important;
+    }
+  }
+}
+.clients-slider {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}

@@ -1,0 +1,8 @@
+button__content: 'Get started'
+button_url: '#'
+button_modifiers:
+  - 'alt'
+
+button_additional:
+  - 'primary'
+  - 'secondary'

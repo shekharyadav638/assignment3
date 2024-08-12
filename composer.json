@@ -33,5 +33,6 @@
     "require": {
         "drupal/components": "^3.0@beta",
         "drupal/emulsify_twig": "^5.0"
+        "drupal/twig_tweak": "3.4"
     }
 }

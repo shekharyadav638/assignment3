@@ -1,0 +1,20 @@
+.link {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+@mixin link {
+  &:hover {
+    color: #4154f1;
+  }
+}
+.link {
+  @include link;
+}
+
+i {
+  margin-left: 5px;
+}

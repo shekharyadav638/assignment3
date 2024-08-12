@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/*
+ * General Variables
+ * Note: colors should go into
+ * components/00-base/01-colors/_color-vars.css
+ * and breakpoint related vars into
+ * components/00-base/base/_breakpoints.css
+*/
+/*
+ * Use this on the outer wrapper of page-level elements.
+ * It ensures consistent spacing between elements on the page.
+ */
+.button {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba( var(--c-text-inverse, 24, 25, 27), 1 );
+  background-color: rgba( var(--c-primary, 135, 164, 157), 1 );
+  line-height: 1.4;
+  padding: 0.5rem 1rem;
+}
+.button:visited {
+  color: rgba( var(--c-text-inverse, 24, 25, 27), 1 );
+}
+.button:hover {
+  color: rgba( var(--c-primary, 135, 164, 157), 1 );
+  background-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+@media (prefers-color-scheme: dark) {
+  .button {
+    color: rgba( var(--c-text, 24, 25, 27), 1 );
+    background-color: rgba( var(--c-primary, 135, 164, 157), 1 );
+  }
+  .button:visited {
+    color: rgba( var(--c-text, 24, 25, 27), 1 );
+  }
+  .button:hover {
+    color: rgba( var(--c-text, 24, 25, 27), 1 );
+    background-color: rgba( var(--c-highlight-bright, 255, 235, 10), 1 );
+  }
+}
+.button--alt {
+  color: rgba( var(--c-text-inverse, 24, 25, 27), 1 );
+  background-color: rgba( var(--c-secondary, " is not a valid color"), 1 );
+  line-height: 2;
+  padding: 1rem 2rem;
+}
+.button--alt:visited {
+  color: rgba( var(--c-text-inverse, 24, 25, 27), 1 );
+}
+.button--alt:hover {
+  color: rgba( var(--c-secondary, " is not a valid color"), 1 );
+  background-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+@media (prefers-color-scheme: dark) {
+  .button--alt {
+    color: rgba( var(--c-text, 24, 25, 27), 1 );
+    background-color: rgba( var(--c-secondary, " is not a valid color"), 1 );
+  }
+  .button--alt:visited {
+    color: rgba( var(--c-text, 24, 25, 27), 1 );
+  }
+  .button--alt:hover {
+    color: rgba( var(--c-text, 24, 25, 27), 1 );
+    background-color: rgba( var(--c-highlight-bright, 255, 235, 10), 1 );
+  }
+}
+
+/**
+ * Breakpoint Configuration
+ * @see https://github.com/Team-Sass/breakpoint/wiki
+ *
+ */
+/*
+ * General Mixins (put specific ones in component files where applicable)
+*/
+/* Mixin - Clearfix.
+ * Adds clearfix based on http://bourbon.io/docs/#clearfix
+ * use example =   @include cleafix
+*/
+.form-item--checkboxes,
+.form-item--checkbox__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-item--radios,
+.form-item--radio__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-item__dropdown {
+  border: 1px solid rgba( var(--c-accent, 111, 67, 154), 1 );
+  display: block;
+  position: relative;
+}
+@media (prefers-color-scheme: dark) {
+  .form-item__dropdown {
+    background-color: rgba( var(--c-background-inverse, 255, 255, 255), 1 );
+  }
+}
+.form-item__dropdown::after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 9px solid rgba( var(--c-accent, 111, 67, 154), 1 );
+  content: " ";
+  position: absolute;
+  top: 42%;
+  right: 1rem;
+  z-index: 2;
+  /* These hacks make the select behind the arrow clickable in some browsers */
+  pointer-events: none;
+  display: none;
+}
+.form-item__dropdown:hover {
+  border-color: rgba( var(--c-accent-bright, 111, 67, 154), 1 );
+}
+
+.form-item__select {
+  border: 1px solid rgba( var(--c-accent, 111, 67, 154), 1 );
+  height: 41px;
+  font-size: 16px;
+  margin: 0;
+  outline: none;
+  padding: 0.6rem 0.75rem 0.5rem;
+  width: 100%;
+}
+.form-item__select :focus {
+  outline: none;
+  color: rgba( var(--c-accent, 111, 67, 154), 1 );
+}
+
+@supports (-webkit-appearance: none) or (appearance: none) or ((-moz-appearance: none) and (mask-type: alpha)) {
+  /* Show custom arrow */
+  .form-item__dropdown::after {
+    display: block;
+  }
+  /* Remove select styling */
+  .form-item__select {
+    padding-right: 2rem; /* Match-01 */
+    /* inside @supports so that iOS <= 8 display the native arrow */
+    background: none; /* Match-04 */
+    /* inside @supports so that Android <= 4.3 display the native arrow */
+    border: 1px solid transparent; /* Match-05 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .form-item__select:focus {
+    border-color: rgba( var(--c-accent, 111, 67, 154), 1 );
+    border-radius: 0;
+  }
+}
+.form-item {
+  color: rgba( var(--c-text, 24, 25, 27), 1 );
+  margin-bottom: 1rem;
+  max-width: 32rem;
+}
+.form-item::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.form-item__label {
+  display: block;
+  font-weight: 600;
+  padding: 0.6rem 0;
+}
+
+.form-item__textfield {
+  border: 1px solid rgba( var(--c-accent, 111, 67, 154), 1 );
+  padding: 0.6rem;
+  max-width: 100%;
+}
+.form-item__textfield:focus {
+  border-color: rgba( var(--c-accent-bright, 111, 67, 154), 1 );
+}
+.form-item__textfield::placeholder {
+  color: rgba( var(--c-text, 24, 25, 27), 1 );
+}
+
+.form-item__description {
+  margin-top: 0.3rem;
+}
+
+.form-fieldset {
+  border: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+.form-fieldset .form-item {
+  margin-left: 1rem;
+  max-width: 31rem;
+}
+
+img,
+picture {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0; /* override normalize */
+}
+
+.figure__caption {
+  font-style: italic;
+}
+
+.ic {
+  font-size: 42px;
+  line-height: 0;
+  margin-right: 20px;
+}
+
+.link {
+  padding: 18px 12px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #4154f1;
+}
+
+i {
+  margin-left: 5px;
+}
+
+.table, .text-field table {
+  border: 1px solid rgba( var(--c-highlight-bright, 255, 235, 10), 1 );
+  border-spacing: 0;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.table__header {
+  background-color: rgba( var(--c-highlight-bright, 255, 235, 10), 1 );
+}
+.table__header > * {
+  border-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+
+.table__header_cell, .text-field th {
+  border: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  padding: 1rem;
+}
+.table__header_cell:last-child, .text-field th:last-child {
+  border-right: 0;
+}
+:last-child > .table__header_cell, .text-field :last-child > th {
+  border-bottom: 0;
+}
+.table__header_cell[data-cell-highlight], .text-field th[data-cell-highlight] {
+  background-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+
+.table__row:nth-child(odd), .text-field tr:nth-child(odd) {
+  background-color: rgba( var(--c-background, 255, 255, 255), 1 );
+  border-color: rgba( var(--c-highlight-bright, 255, 235, 10), 1 );
+}
+.table__row:nth-child(even), .text-field tr:nth-child(even) {
+  background-color: rgba( var(--c-highlight-bright, 255, 235, 10), 1 );
+  border-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+
+.table__cell, .text-field td {
+  border: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  padding: 1rem;
+}
+.table__cell:last-child, .text-field td:last-child {
+  border-right: 0;
+}
+:last-child > .table__cell, .text-field :last-child > td {
+  border-bottom: 0;
+}
+.table__cell[data-cell-highlight], .text-field td[data-cell-highlight] {
+  background-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+
+.table__footer {
+  background-color: rgba( var(--c-highlight-bright, 255, 235, 10), 1 );
+}
+.table__footer > * {
+  border-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+
+.table__footer_cell, .text-field tfoot th {
+  border: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  padding: 1rem;
+}
+.table__footer_cell:last-child, .text-field tfoot th:last-child {
+  border-right: 0;
+}
+:last-child > .table__footer_cell, .text-field tfoot :last-child > th {
+  border-bottom: 0;
+}
+.table__footer_cell[data-cell-highlight], .text-field tfoot th[data-cell-highlight] {
+  background-color: rgba( var(--c-highlight, 255, 235, 10), 1 );
+}
+
+caption {
+  caption-side: bottom;
+}
+
+.heading {
+  margin-bottom: 0.5rem;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Create a mixin for paragraph styles that can be implemented
+ * in components with other classnames.
+*/
+.paragraph, .text-long p {
+  margin: 0 0 1em;
+}
+
+.blockquote, .text-long blockquote {
+  font-style: italic;
+  border-left: solid 3px rgba( var(--c-accent, 111, 67, 154), 1 );
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.hr, .text-long hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+/* TODO: BEM selectors should be applied to wysiwyg-created content */
+pre {
+  margin: 0;
+  background-color: var(--c-background-section);
+}
+
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.tooltip__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid rgba( var(--c-text, 24, 25, 27), 1 );
+  border-radius: 50%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+  text-indent: 1px;
+  background: none;
+  color: rgba( var(--c-text, 24, 25, 27), 1 );
+  cursor: pointer;
+}
+.tooltip__icon:focus-visible {
+  outline-offset: 0.5rem;
+}
+
+.tooltip__content {
+  visibility: hidden;
+  position: absolute;
+  padding: 1rem;
+  min-width: 12.5rem;
+  max-width: 18.5rem;
+  border-radius: 0.15rem;
+  font-size: 0.875rem;
+  background-color: rgba( var(--c-accent, 111, 67, 154), 1 );
+  color: rgba( var(--c-text-inverse, 24, 25, 27), 1 );
+  overflow-wrap: break-word;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.3);
+  z-index: 11;
+}
+.tooltip__content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.tooltip__content[data-direction=top] {
+  transform: translateY(calc(-100% - 1rem));
+}
+.tooltip__content[data-direction=top]::before {
+  top: calc(100% - 1px);
+  left: calc(50% - 0.5rem);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid rgba( var(--c-accent, 111, 67, 154), 1 );
+}
+.tooltip__content[data-direction=right] {
+  transform: translate(calc(18.5rem / 2 + 1.875rem), -50%);
+}
+.tooltip__content[data-direction=right]::before {
+  top: 50%;
+  right: calc(100% - 1px);
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-right: 0.5rem solid rgba( var(--c-accent, 111, 67, 154), 1 );
+}
+.tooltip__content[data-direction=bottom] {
+  margin-top: 2.2rem;
+}
+.tooltip__content[data-direction=bottom]::before {
+  top: -0.5rem;
+  left: calc(50% - 0.5rem);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid rgba( var(--c-accent, 111, 67, 154), 1 );
+}
+.tooltip__content[data-direction=left] {
+  transform: translate(calc(-18.5rem / 2 - 1.875rem), -50%);
+}
+.tooltip__content[data-direction=left]::before {
+  top: 50%;
+  left: calc(100% - 1px);
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.5rem solid rgba( var(--c-accent, 111, 67, 154), 1 );
+}
+
+.tooltip__content--visible {
+  visibility: visible;
+}
+
+/* Responsive Video using CSS only */
+.video iframe {
+  height: 100%;
+  width: 100%;
+}
+.video video {
+  height: auto;
+  width: 100%;
+}
+
+.video__wrap {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn {
+  font-size: 15px;
+  padding: 8px 25px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  background: #4154f1;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.btn--primary {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 12px 40px;
+}
+.btn--primary:after {
+  padding-left: 5px;
+  content: " →";
+  transition: transform 0.3s;
+  display: inline-block;
+}
+.btn--primary:hover {
+  background: #6573f5;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.btn--primary:hover:after {
+  transform: translateX(5px);
+}
+.btn--secondary:hover {
+  background: #6573f5;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.underline_1, .underline_3 {
+  width: 50px;
+  height: 2px;
+  background-color: #4b4b4b;
+}
+.underline_2 {
+  width: 50px;
+  height: 4px;
+  background-color: #3b96b0;
+}
+
+.small_heading {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: color-mix(in srgb, #4154f1, transparent 90%);
+  color: #4154f1;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}/*# sourceMappingURL=atoms.css.map */

@@ -1,0 +1,39 @@
+.heading {
+  color: #52565e;
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  &::after {
+    content: '';
+    background: #feb900;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  &::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #feb900;
+    display: inline-block;
+    margin: 0 15px 10px 0;
+  }
+  &::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #feb900;
+    display: inline-block;
+    margin: 0 0 10px 15px;
+  }
+}

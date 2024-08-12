@@ -1,0 +1,26 @@
+<section id="testimonials" class="testimonials section">
+    <div class="container section-title">
+        {% include "@atoms/text/headings/_heading.twig" with {
+            'heading': heading,
+            'heading_level': '2'
+        } %}
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+            paragraph_content: body,
+        } %}
+    </div>
+    <div class="container">
+        <div class="slider">    
+            {% for item in items %}
+                <div class="testimonial-wrap">
+                    {% include "@molecules/testimonial/card.twig" with {
+                        card__body: item.body,
+                        img_src: item.image,
+                        img_alt: 'person_image',
+                        heading_name: item.name,
+                        heading_role: item.role
+                    }%}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

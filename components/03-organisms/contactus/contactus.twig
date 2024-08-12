@@ -1,0 +1,33 @@
+<section id="contact" class="contact section">
+    <div class="container section_title">
+        {% include "@atoms/title/title.twig" with {
+            title_content: 'contact',
+        } %}
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+            paragraph_content: 'Contact Us',
+        } %}
+    </div>
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6">
+                <div class="row gy-4">
+                    {% for item in items %}
+                        <div class="col-md-6">
+                            {% include "@molecules/contact_card/card.twig" with {
+                                card__subheading: item.sub,
+                                card__body: item.address1,
+                                card__body2: item.address2,
+                                subheading_level: '3',
+                                icon_src: item.src,
+                                icon_clr: '#4154f1'  
+                            }%}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                {% include "@molecules/form/form.twig" %}   
+            </div>
+        </div>
+    </div>
+</section>

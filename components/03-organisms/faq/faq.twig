@@ -1,0 +1,27 @@
+<section id="faq" class="faq section">
+    <div class="container section_title">
+        {% include "@atoms/title/title.twig" with {
+            title_content: 'F.A.Q.',
+        } %}
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+            paragraph_content: 'Frequently Asked Questions',
+        } %}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="faq-container">
+                    {% for item in items %}
+                        <div class="faq-item">
+                            {% include "@molecules/accordion/accordion.twig" with {
+                                accordion__item__heading: item.heading,
+                                accordion__item__content: item.content
+                            }%}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6"></div>
+        </div>
+    </div>
+</section>

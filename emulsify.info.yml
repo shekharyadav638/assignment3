@@ -1,7 +1,7 @@
 name: Emulsify
 type: theme
 description: Theme using Storybook and component-driven development
-base theme: stable9
+base theme: claro
 core_version_requirement: ^9 || ^10
 
 dependencies:

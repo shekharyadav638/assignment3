@@ -1,0 +1,6 @@
+filter_class: 'filter-remodelling'
+title: 'App1'
+description: 'Lorem ipsum, dolor sit amet consectetur'
+img_src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/remodeling-1.jpg'
+gallery_class: 'app'
+details_link: 'project-details.html'

@@ -1,0 +1,27 @@
+.small_heading {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: color-mix(in srgb, #4154f1, transparent 90%);
+  color: #4154f1;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family:
+    'Roboto',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'Liberation Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+}

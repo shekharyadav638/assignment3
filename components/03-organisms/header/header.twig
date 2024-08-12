@@ -1,0 +1,16 @@
+<section id="header" class="header d-flex align-items-center fixed-top">
+    <div class="head container-fluid container-xl position-relative d-flex align-items-center">
+        {% include "@molecules/logo/logo.twig" with {} %}
+        {% include "@molecules/Navlist/Navlist.twig" with {
+            links: links_list,
+        } %}
+        <div class="navbar_btn flex-md-shrink-0">
+            {% set button_modifier = 'btn--secondary' %}
+            {% include "@atoms/button_demo/buttons.twig" with {
+                'button__content': btn_content, 
+                'button_modifiers': button_modifier
+            } %}
+        </div>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </div>
+</section>
