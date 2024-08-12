@@ -1,0 +1,24 @@
+src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/alt-services.jpg'
+alt: 'alt-services_image'
+card_heading: 'Enim quis est voluptatibus aliquid consequatur fugiat'
+feature_body:
+  'Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus.
+  Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed
+  facere corporis dolores excepturi'
+
+cards:
+  - heading: 'Lorem Ipsum'
+    text: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident'
+    icon: 'bi bi-easel flex-shrink-0'
+
+  - heading: 'Nemo Enim'
+    text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque'
+    icon: 'bi bi-patch-check flex-shrink-0'
+
+  - heading: 'Dine Pad'
+    text: 'Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis'
+    icon: 'bi bi-brightness-high flex-shrink-0'
+
+  - heading: 'Tride clov'
+    text: 'Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet. Et eligendi'
+    icon: 'bi bi-easel flex-shrink-0'

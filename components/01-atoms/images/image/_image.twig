@@ -1,0 +1,9 @@
+{% set image_base_class = image_base_class|default('image') %}
+
+<img
+  class="img-fluid"
+  {% if image_src %}
+    src="{{ image_src }}"
+    alt="{{ image_alt }}"
+  {% endif %}
+/>

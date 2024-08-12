@@ -1,0 +1,30 @@
+<div class="stats-card d-flex align-items-center w-100 h-100">
+  <div class="icon_img">
+      {% if icon_src %}
+      {% include "@atoms/images/icons/_icon.twig" with { 
+        icon_src: icon_src,
+        iconColor: icon_clr
+      }%}
+    {% endif %}
+  </div>
+
+  <div class="icon_body">
+    {% if card__subheading %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: subheading_level,
+        heading: card__subheading,
+        heading_url: card__subheading__link,
+      } %}
+    {% endif %}
+
+    {% if card__body %}
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_blockname: card__base_class,
+        paragraph_content: card__body,
+      } %}
+    {% endif %}
+  </div>
+</div>
+
+
+

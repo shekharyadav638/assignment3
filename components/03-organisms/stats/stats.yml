@@ -1,0 +1,19 @@
+heading: 'Stats'
+body: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'
+
+items:
+  - num: '232'
+    body: 'Happy Clients'
+    icon: 'bi bi-emoji-smile color-blue flex-shrink-0'
+
+  - num: '521'
+    body: 'Projects'
+    icon: 'bi bi-journal-richtext color-orange flex-shrink-0'
+
+  - num: '1463'
+    body: 'Hours Of Support'
+    icon: 'bi bi-headset color-green flex-shrink-0'
+
+  - num: '15'
+    body: 'Hard Workers'
+    icon: 'bi bi-people color-pink flex-shrink-0'

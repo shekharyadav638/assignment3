@@ -1,0 +1,12 @@
+{% set heading__base_class = heading__base_class|default('heading') %}
+
+<h{{ heading_level }} class="heading" style="color: {{heading_clr}};">
+  {% if heading_url %}
+    {% include "@atoms/links/link/link.twig" with {
+      "link_content": heading,
+      "link_url": heading_url,
+    } %}
+  {% else %}
+    {{ heading }}
+  {% endif %}
+</h{{ heading_level }}>

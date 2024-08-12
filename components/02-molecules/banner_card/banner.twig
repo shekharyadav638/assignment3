@@ -1,0 +1,23 @@
+<div class="card">
+  <div class = "card_left">
+    {% include "@atoms/text/headings/_heading.twig" with {
+    'heading': heading_content,
+    'heading_level': '1',
+    } %}
+
+    <p class="card_paragraph">{{ paragraph }}</p>
+
+    <div class="card_button">
+    {% include "@atoms/button_demo/buttons.twig" with {
+      'button__content': button_content,
+      'button_modifiers': button_modifier
+    } %}
+    </div>
+  </div>
+  <div class = "card_right">
+    {% include "@atoms/images/image/_image.twig" with {
+        'image_src': img_src,
+        'image_alt': img_alt
+    } %}
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.feature-item {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  & i {
+    color: #feb900;
+    font-size: 42px;
+    line-height: 0;
+    margin-right: 20px;
+  }
+
+  & span {
+    color: #52565e;
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+  }
+
+  & p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+}

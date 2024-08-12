@@ -1,0 +1,25 @@
+<section id="constructions" class="constructions section">
+    <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        {% include "@atoms/text/headings/_heading.twig" with {
+            heading_level: '2',
+            heading: 'Constructions'
+        } %}
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+            paragraph_content: 'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'
+        } %}
+    </div>
+
+    <div class="container">
+      <div class="row gy-4">
+            {% for card in cards %}
+            <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                {% include "@molecules/constructions_card/constructions_card.twig" with {
+                    img: card.img,
+                    card_title: card.title,
+                    card_body: card.body
+                } %}
+            </div>
+            {% endfor %}
+      </div>
+    </div>
+  </section>

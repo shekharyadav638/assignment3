@@ -1,0 +1,27 @@
+<div class="blog_item position-relative h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="blog_image position-relative overflow-hidden">
+        {% include "@atoms/images/image/_image.twig" with {
+            image_src: img_src,
+            image_alt: img_alt
+        }%}
+        <span class="blog_date">{{date}}</span>
+    </div>
+    <div class="blog_content d-flex flex-column">
+        {% include "@atoms/text/headings/_heading.twig" with {
+            'heading': heading_content,
+            'heading_level': '4',
+        } %}
+
+        <div class="meta d-flex align-items-center">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-person"></i> <span class="ps-2">{{blog_name}}</span>
+            </div>
+            <span class="px-3 text-black-50">/</span>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-folder2"></i> <span class="ps-2">{{blog_topic}}</span>
+            </div>
+        </div>
+        <hr>
+        <a href="https://www.youtube.com/" class="readmore"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>

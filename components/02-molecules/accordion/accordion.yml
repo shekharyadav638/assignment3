@@ -1,0 +1,15 @@
+card_heading: 'Voluptatem dignissimos provident'
+id: 'tab-1'
+label: 'feature1'
+card_body:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.'
+icon_src: 'bi bi-check2-all'
+active_class: 'show active'
+
+lists:
+  - content: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  - content: 'Duis aute irure dolor in reprehenderit in voluptate velit.'
+  - content: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.'
+
+img_src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/features-1.jpg'

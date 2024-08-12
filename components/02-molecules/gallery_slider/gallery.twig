@@ -1,0 +1,13 @@
+<div class="gallery">
+  {% for item in items %}
+    {% if item.type == 'image' %}
+      <a href="{{ item.large }}" data-fancybox="gallery">
+        <img src="{{ item.thumb }}" alt="{{ item.alt }}" />
+      </a>
+    {% elseif item.type == 'video' %}
+      <a href="{{ item.video }}" data-fancybox="gallery" data-type="iframe">
+        <img src="{{ item.thumb }}" alt="{{ item.alt }}" />
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

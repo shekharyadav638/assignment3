@@ -1,0 +1,11 @@
+.section-title {
+  & h2 {
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+  }
+  & p {
+    color: #364d59;
+    margin-bottom: 0;
+  }
+}

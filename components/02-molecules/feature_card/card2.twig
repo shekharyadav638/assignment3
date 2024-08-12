@@ -1,0 +1,17 @@
+<div class="feature-item d-flex align-items-center w-100 h-100">
+    {% include "@atoms/images/icons/_icon.twig" with { 
+      icon_src: icon_src
+    }%}
+
+  <div>
+    <span data-purecounter-start="0" data-purecounter-end="{{number}}" data-purecounter-duration="0" class="purecounter">{{number}}</span>
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_blockname: card__base_class,
+        paragraph_content: card__body,
+      } %}
+  </div>
+</div>
+
+
+
+

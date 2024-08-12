@@ -1,0 +1,52 @@
+<div class = "cardContainer">
+  {# image #}
+  {% if img_src %}
+    {% include "@atoms/images/image/_image.twig" with {
+      image_src: img_src,
+    } %}
+  {% endif %}
+
+   {# Subheading #}
+    {% if card__subheading %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: subheading_level,
+        heading: card__subheading,
+        heading_url: card__subheading__link,
+      } %}
+    {% endif %}
+
+    {# Heading #}
+    {% if card__heading %}
+      {{ title_prefix }}
+      {% include "@atoms/text/headings/_heading.twig" with {
+        heading_level: heading_level,
+        heading: card__heading,
+        heading_url: card__heading__link,
+      } %}
+      {{ title_suffix }}
+    {% endif %}
+    
+    
+    {# Body #}
+    {% if card__body %}
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_content: card__body
+      } %}
+    {% endif %}
+
+    {% if card__body2 %}
+      {% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_content: card__body2
+      } %}
+    {% endif %}
+
+      {% if card__button__url %}
+      {% include "@atoms/button_demo/buttons.twig" with { 
+        button_modifiers: card__button__modifier,
+        button__content: card__button__content,
+        button_url: card__button__url,
+      } %}
+    {% endif %}
+</div>
+
+

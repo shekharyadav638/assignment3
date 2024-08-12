@@ -1,0 +1,28 @@
+<div class="testimonial-item">
+    {% include "@atoms/images/image/_image.twig" with {
+        image_src: img_src,
+        image_alt: img_alt
+    }%}
+    {% include "@atoms/text/headings/_heading.twig" with {
+        'heading': heading_name,
+        'heading_level': '4'
+    } %}
+    {% include "@atoms/text/headings/_heading.twig" with {
+        'heading': heading_role,
+        'heading_level': '5',
+    } %}
+
+    <div class="testimonial_stars">
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+      ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+      ><i class="bi bi-star-fill"></i>
+    </div>
+
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_content: card__body
+    } %}
+</div>
+
+
+
+

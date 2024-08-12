@@ -1,0 +1,29 @@
+.cardContainer {
+  background-color: transparent;
+}
+
+.card_btn {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-watch-video {
+  text-decoration: none;
+  i {
+    color: #4154f1;
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+  }
+
+  span {
+    font-size: 16px;
+    transition: 0.5s;
+    color: #444444;
+    font-weight: 600;
+    &:hover {
+      color: #4154f1;
+    }
+  }
+}

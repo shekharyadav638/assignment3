@@ -1,0 +1,33 @@
+<section id="hero" class="hero section dark-background">
+  <div class="info d-flex align-items-center">
+    <div class="container">
+      <div
+        class="row justify-content-center aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="col-lg-6 text-center hero_card">
+            {% include "@molecules/card/card.twig" with { 
+                card__heading: hero_card_heading,
+                card__body: hero_card_text,
+                card__button__content: hero_card_btn_text,
+                card__button__url: hero_card_btn_url,
+                card__button__modifier: hero_card_btn_class,
+                heading_level: '3'
+            }%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="carousel slide">
+        {% for image in images %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                {% include "@atoms/images/image/_image.twig" with {
+                    image_src: image.src,
+                    image_alt: 'Slider-img'
+                } %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
