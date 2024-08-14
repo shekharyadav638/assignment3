@@ -1,5 +1,5 @@
 <section id="services" class="services section light-background">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="container section-title" >
     {% include "@atoms/text/headings/_heading.twig" with {
         'heading': block_heading,
         'heading_level': '2',
@@ -13,9 +13,7 @@
     <div class="row gy-4">
       {% for card in cards %}  
         <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up" 
-            data-aos-delay="{{ loop.index0 * 100 + 100 }}">
+            class="col-lg-4 col-md-6">
             {% include "@molecules/service_card/card.twig" with {
                 heading_content: card.heading,
                 paragraph: card.paragraph,
@@ -27,3 +25,6 @@
     </div>
   </div>
 </section>
+
+<!-- data-aos="fade-up" 
+            data-aos-delay="{{ loop.index0 * 100 + 100 }}" -->
