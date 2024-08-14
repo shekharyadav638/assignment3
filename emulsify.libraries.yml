@@ -6,9 +6,21 @@ global:
       https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css: {}
       https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css:
         {}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css:
+        {}
+      https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css:
+        {}
+      https://unpkg.com/aos@2.3.1/dist/aos.css: {}
+
   js:
     js/bootstrap.bundle.min.js: {}
-    js/aos.js: {}
+    components/03-organisms/hero/hero.js: {}
+    https://unpkg.com/aos@2.3.1/dist/aos.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: {}
+    https://code.jquery.com/jquery-1.11.0.min.js: {}
+    https://code.jquery.com/jquery-migrate-1.2.1.min.js: {}
+    js/heroSlider.js: {}
 
   dependencies:
     - core/jquery
@@ -20,8 +32,6 @@ main-menu:
   dependencies:
     - core/drupal
 
-# IE 11 support for SVG use - disable if not needed.
-# See also components/01-atoms/images/icons/_icon.twig to remove attach_library.
 sprite:
   js:
     components/01-atoms/images/icons/svgxuse.min.js:

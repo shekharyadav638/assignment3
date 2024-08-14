@@ -1,6 +1,7 @@
 import card2 from './card2.twig';
 
 import cardData2 from './card2.yml';
+import './card2';
 
 /**
  * Storybook Definition.

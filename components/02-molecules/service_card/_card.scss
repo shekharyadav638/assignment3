@@ -6,7 +6,7 @@
   height: 100%;
 
   &:hover {
-    & h3 {
+    & h4 {
       border-color: #feb900;
       color: #52565e;
     }
@@ -47,7 +47,7 @@
     }
   }
 
-  & h3 {
+  & h4 {
     color: color-mix(in srgb, #52565e, transparent 20%);
     font-weight: 700;
     margin: 0 0 20px 0;

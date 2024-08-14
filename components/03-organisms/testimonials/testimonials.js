@@ -9,5 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     autoplaySpeed: 1000,
     autoplay: true,
     slidesToShow: 2,
+    dots: true,
   });
 });

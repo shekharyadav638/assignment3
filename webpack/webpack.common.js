@@ -69,4 +69,5 @@ module.exports = {
     path: distDir,
     filename: '[name].js',
   },
+  resolve: { preferRelative: true },
 };
