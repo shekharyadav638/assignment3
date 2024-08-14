@@ -1,4 +1,29 @@
 @charset "UTF-8";
+.accordion h3 {
+  font-weight: 700;
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.accordion p {
+  font-style: italic !important;
+  color: #364d59;
+}
+.accordion ul {
+  list-style: none;
+  padding: 0;
+}
+.accordion ul li {
+  padding-top: 10px;
+  color: #364d59;
+}
+.accordion ul li i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #feb900;
+}
+
 /*
  * General Variables
  * Note: colors should go into
@@ -10,90 +35,6 @@
  * Use this on the outer wrapper of page-level elements.
  * It ensures consistent spacing between elements on the page.
  */
-/**
- * Breakpoint Configuration
- * @see https://github.com/Team-Sass/breakpoint/wiki
- *
- */
-/*
- * General Mixins (put specific ones in component files where applicable)
-*/
-/* Mixin - Clearfix.
- * Adds clearfix based on http://bourbon.io/docs/#clearfix
- * use example =   @include cleafix
-*/
-.accordion {
-  padding-block: 1rem;
-}
-
-.accordion__controls {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.accordion__controls__item:not(:last-child) {
-  padding-right: 1rem;
-  margin-right: 1rem;
-  border-right: 1px solid;
-}
-
-.accordion-item__toggle {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.accordion-item__toggle:hover {
-  color: rgba( var(--c-primary, 135, 164, 157), 1 );
-}
-
-.accordion__toggle-all {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.accordion__toggle-all:hover {
-  color: rgba( var(--c-primary, 135, 164, 157), 1 );
-}
-
-.accordion__icon {
-  height: 1rem;
-  width: 1rem;
-  pointer-events: none;
-}
-.accordion__toggle-all--collapse .accordion__icon {
-  transform: rotate(180deg);
-}
-
-.accordion-item {
-  border-bottom: 1px solid;
-  padding-top: 1rem;
-}
-
-.accordion-item__heading {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.accordion-item__icon {
-  height: 1rem;
-  width: 1rem;
-}
-[aria-expanded=true] > .accordion-item__icon {
-  transform: rotate(180deg);
-}
-
-.accordion-item__content {
-  overflow: hidden;
-}
-[data-accordion-expanded=true] .accordion-item__content {
-  margin-bottom: 1rem;
-}
-[data-accordion-expanded=false] .accordion-item__content {
-  max-height: 0;
-}
-
 .alert {
   background-color: rgba( var(--c-warning, 255, 235, 10), 1 );
   padding: 1rem;
@@ -195,6 +136,18 @@
   font-family: "Nunito", sans-serif;
 }
 
+/**
+ * Breakpoint Configuration
+ * @see https://github.com/Team-Sass/breakpoint/wiki
+ *
+ */
+/*
+ * General Mixins (put specific ones in component files where applicable)
+*/
+/* Mixin - Clearfix.
+ * Adds clearfix based on http://bourbon.io/docs/#clearfix
+ * use example =   @include cleafix
+*/
 .breadcrumb {
   list-style: none;
   margin: 0;
@@ -233,7 +186,6 @@
 }
 
 .link {
-  padding: 18px 12px;
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -812,69 +764,118 @@ i {
   padding-top: 40px;
 }
 
-.about_top h2 {
-  text-align: center;
-  color: #37517e;
-  font-size: 32px;
+.our-story {
+  padding: 40px;
+  background-color: color-mix(in srgb, #364d59, transparent 96%);
+}
+@media (min-width: 991px) {
+  .our-story {
+    padding-right: 35%;
+  }
+}
+.our-story h4 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: color-mix(in srgb, #364d59, transparent 50%);
+}
+.our-story h5 {
+  font-size: 2.25rem;
   font-weight: 700;
+  color: color-mix(in srgb, #364d59, transparent 20%);
 }
-.about_bottom {
-  padding: 0px 20px;
-  padding-top: 60px;
-  display: flex;
-  justify-content: space-between;
+.our-story ul {
+  list-style: none;
+  padding: 0;
 }
-.about_bottom_left, .about_bottom_right {
-  width: 50%;
-  line-height: 1.3;
-  padding: 12px 0px;
+.our-story ul li {
+  padding-top: 10px;
+  color: #364d59;
+}
+.our-story ul li i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #feb900;
+}
+.our-story .watch-video i {
+  font-size: 2rem;
+  transition: 0.3s;
+  color: #feb900;
+}
+.our-story .watch-video a {
+  font-weight: 600;
+  color: color-mix(in srgb, #364d59, transparent 20%);
+  margin-left: 8px;
+  transition: 0.3s;
 }
 
 .service_card {
   background-color: #ffffff;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  transition: 0.3s;
   height: 100%;
-  padding: 60px 30px;
-  text-align: center;
-  transition: 0.3s;
-  border-radius: 5px;
 }
-.service_card:hover {
-  background-color: var(--hover-color);
+.service_card:hover h4 {
+  border-color: #feb900;
+  color: #52565e;
 }
-.service_card:hover h3, .service_card:hover p, .service_card:hover a {
-  color: #ffffff !important;
+.service_card:hover a {
+  color: #feb900;
 }
-.service_card:hover i {
-  background-color: #ffffff !important;
+.service_card:hover_icon::before {
+  background: #feb900;
 }
-.service_card i {
-  font-size: 36px;
-  padding: 20px 20px;
-  border-radius: 4px;
+.service_card_icon {
+  width: 48px;
+  height: 48px;
   position: relative;
-  margin-bottom: 25px;
-  display: inline-block;
-  line-height: 0;
-  transition: 0.3s;
-  color: blue;
+  margin-bottom: 50px;
 }
-.service_card h3 {
-  font-size: 24px;
+.service_card_icon::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: color-mix(in srgb, #feb900, transparent 95%);
+  border-radius: 50px;
+  z-index: 1;
+  top: 10px;
+  right: -20px;
+  transition: 0.3s;
+}
+.service_card_icon i {
+  color: #52565e;
+  font-size: 56px;
+  transition: ease-in-out 0.3s;
+  z-index: 2;
+  position: relative;
+}
+.service_card h4 {
+  color: color-mix(in srgb, #52565e, transparent 20%);
   font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  font-size: 22px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 4px solid color-mix(in srgb, #52565e, transparent 90%);
+  transition: 0.3s;
+}
+.service_card p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 .service_card a {
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
+  margin-top: 15px;
+  display: inline-block;
+  color: color-mix(in srgb, #364d59, transparent 30%);
   font-size: 16px;
-  padding: 8px 20px;
 }
-.service_card a:after {
-  padding-left: 5px;
-  content: " →";
+
+.service_card:hover .service_card_icon:before {
+  background: #feb900;
 }
 
 .navbar {
@@ -903,26 +904,6 @@ i {
   margin-left: 30px;
 }
 
-.call {
-  display: flex;
-  align-items: center;
-}
-.call_text {
-  display: flex;
-  flex-direction: column;
-}
-.call_text span {
-  color: #787878;
-}
-.call_text a {
-  text-decoration: none;
-}
-@media (max-width: 1000px) {
-  .call {
-    display: none;
-  }
-}
-
 .icon_body h4 {
   font-size: 36px;
   font-weight: 600;
@@ -944,42 +925,54 @@ i {
   font-family: Arial, sans-serif !important;
 }
 
-.icon_body h4 {
-  font-size: 36px;
-  font-weight: 600;
-  color: #012970;
+.feature-item {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
-.icon_body p {
+.feature-item i {
+  color: #feb900;
+  font-size: 42px;
+  line-height: 0;
+  margin-right: 20px;
+}
+.feature-item span {
+  color: #52565e;
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+}
+.feature-item p {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
-.feature-item {
-  padding: 24px 20px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  height: 100%;
-}
-
-.icon_body h4 {
-  font-size: 20px;
+.feature_body h4 {
   font-weight: 700;
-  margin: 0 0 10px 0;
-  color: #012970;
-  font-family: "Nunito", sans-serif !important;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
-.icon_body p {
-  font-size: 15px;
-  color: color-mix(in srgb, #444444, transparent 30%);
+.feature_body p {
+  line-height: 24px;
+  font-size: 14px;
   margin-bottom: 0;
 }
 
-.icon_img i {
-  font-size: 44px;
-  line-height: 44px;
-  margin-right: 15px;
+.icon_feature i {
+  color: #feb400;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  line-height: 0;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
 .pricingCard {
@@ -1014,19 +1007,6 @@ i {
 }
 .icon_cla i {
   font-size: 48px;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-  color: #444444;
-  text-align: center;
-  line-height: 26px;
-  font-size: 16px;
-  margin-bottom: 25px;
-}
-ul li {
-  padding-bottom: 10px;
 }
 
 .na {
@@ -1064,75 +1044,66 @@ ul li {
   color: #ffffff;
 }
 
-.team-member {
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  border-radius: 5px;
-  transition: 0.3s;
+.member {
+  position: relative;
 }
-.team-member:hover {
-  transition: transform 0.3s ease;
-  transform: scale(1.08);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-}
-.team-member:hover img {
-  opacity: 0.8;
-}
-.team-member:hover .social {
-  right: 8px;
+.member:hover .member-img .social {
+  padding-bottom: 0;
+  visibility: visible;
   opacity: 1;
 }
 
-.member-image {
-  position: relative;
+.member-img {
+  margin: 0 80px;
+  border-radius: 50%;
   overflow: hidden;
+  position: relative;
 }
-.member-image .social {
+.member-img img {
+  position: relative;
+  z-index: 1;
+}
+.member-img .social {
   position: absolute;
-  right: -100%;
-  top: 30px;
-  opacity: 0;
-  border-radius: 4px;
-  transition: 0.5s;
-  background: color-mix(in srgb, #ffffff, transparent 20%);
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
+  padding-bottom: 20px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
 }
-.member-image .social a {
-  transition: color 0.3s;
-  color: color-mix(in srgb, #444444, transparent 50%);
-  margin: 15px 12px;
-  display: block;
-  line-height: 0;
-  text-align: center;
+.member-img .social a {
+  transition: 0.3s;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 8px;
 }
-.member-image .social a:hover {
-  color: #444444;
-}
-.member-image .social i {
-  font-size: 18px;
+.member-img .social a:hover {
+  color: #feb900;
 }
 
-.member-body {
-  padding: 10px 15px 20px 15px;
+.member-info {
+  margin-top: 30px;
 }
-.member-body h4 {
+.member-info h4 {
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
+  margin-bottom: 6px;
+  font-size: 18px;
 }
-.member-body span {
-  display: block;
-  font-size: 14px;
-  font-weight: 400;
-  color: color-mix(in srgb, #444444, transparent 50%);
-}
-.member-body p {
+.member-info span {
   font-style: italic;
+  display: block;
+  font-size: 15px;
+  color: color-mix(in srgb, #364d59, transparent 40%);
+  margin-bottom: 10px;
+}
+.member-info p {
+  margin-bottom: 0;
   font-size: 14px;
-  padding-top: 15px;
-  line-height: 26px;
-  color: color-mix(in srgb, #444444, transparent 30%);
 }
 
 .social {
@@ -1146,44 +1117,43 @@ ul li {
   z-index: 2;
 }
 
-.testimonial {
+.testimonial-item {
   background-color: #ffffff;
-  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   box-sizing: content-box;
-  padding: 30px;
-  margin: 40px 30px;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  transition: 0.3s;
+  padding: 30px 30px 30px 60px;
+  margin: 30px 15px;
+  min-height: 200px;
+  position: relative;
 }
-.testimonial_stars {
-  margin-bottom: 15px;
-}
-.testimonial_stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-.testimonial p {
+.testimonial-item p {
   font-style: italic;
-  margin: 0 auto 15px auto;
+  margin: 15px auto 15px auto;
 }
-.testimonial_profile img {
+.testimonial-item img {
   width: 90px;
-  border-radius: 50%;
-  border: 4px solid #ffffff;
-  margin: 0 auto;
+  border-radius: 10px;
+  border: 6px solid #ffffff;
+  position: absolute;
+  left: -45px;
 }
-.testimonial_profile h3 {
+.testimonial-item h4 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
 }
-.testimonial_profile h4 {
+.testimonial-item h5 {
+  color: color-mix(in srgb, #364d59, transparent 50%);
   font-size: 14px;
-  color: color-mix(in srgb, #444444, transparent 40%);
   margin: 0;
+}
+
+.testimonial_stars {
+  margin: 10px 0;
+}
+.testimonial_stars i {
+  color: #ffc107;
+  margin: 0 1px;
 }
 
 .blog_item {
@@ -1195,14 +1165,14 @@ ul li {
   transition: transform 0.3s ease;
   transform: scale(1.1);
 }
-.blog_item:hover a, .blog_item:hover h3 {
-  color: #4154f1;
+.blog_item:hover a, .blog_item:hover h4 {
+  color: #feb900;
 }
 .blog_date {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: #4154f1;
+  background-color: #feb900;
   color: #ffffff;
   text-transform: uppercase;
   font-size: 13px;
@@ -1212,7 +1182,8 @@ ul li {
 .blog_content {
   padding: 30px;
 }
-.blog_content h3 {
+.blog_content h4 {
+  color: #52565e;
   font-size: 20px;
   font-weight: 700;
   transition: 0.3s;
@@ -1229,7 +1200,7 @@ ul li {
 
 .meta i {
   font-size: 16px;
-  color: #4154f1;
+  color: #feb900;
 }
 .meta span {
   font-size: 15px;
@@ -1270,25 +1241,169 @@ ul li {
   margin-bottom: 0 !important;
 }
 
-.email-form {
-  background: color-mix(in srgb, #444444, transparent 96%);
+.php-email-form {
+  background: color-mix(in srgb, #364d59, transparent 97%);
   padding: 30px;
   height: 100%;
 }
-.email-form .input {
+
+@media (max-width: 575px) {
+  .php-email-form {
+    padding: 20px;
+  }
+}
+.php-email-form h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.php-email-form p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.php-email-form input[type=text],
+.php-email-form input[type=email],
+.php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: #444444;
-  background-color: color-mix(in srgb, #ffffff, transparent 50%);
-  border-color: color-mix(in srgb, #444444, transparent 80%);
+  color: #364d59;
+  background-color: color-mix(in srgb, #ffffff, transparent 20%);
+  border-color: color-mix(in srgb, #364d59, transparent 80%);
 }
-.email-form button {
-  background: #4154f1;
+
+.php-email-form input[type=text]:focus,
+.php-email-form input[type=email]:focus,
+.php-email-form textarea:focus {
+  border-color: #feb900;
+}
+
+.php-email-form input[type=text]::placeholder,
+.php-email-form input[type=email]::placeholder,
+.php-email-form textarea::placeholder {
+  color: color-mix(in srgb, #364d59, transparent 70%);
+}
+
+.php-email-form button[type=submit] {
   color: #ffffff;
+  background: #feb900;
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
   border-radius: 4px;
+}
+
+.php-email-form button[type=submit]:hover {
+  background: color-mix(in srgb, #feb900, transparent 20%);
+}
+
+.card-item {
+  background-color: #ffffff;
+  border: 1px solid color-mix(in srgb, #364d59, transparent 85%);
+  position: relative;
+  border-radius: 0;
+}
+.card-item .card-bg {
+  min-height: 300px;
+  position: relative;
+}
+.card-item .card-bg img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+.card-item .card-body {
+  padding: 30px;
+}
+.card-item .card-body h4 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.card-item .card-body p {
+  color: color-mix(in srgb, #364d59, transparent 40%);
+  margin: 0;
+}
+
+.portfolio-content {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-content img {
+  transition: 0.3s;
+}
+
+.portfolio-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+.portfolio-info h4 {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+  background-color: #feb900;
+}
+.portfolio-info p {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio-content:hover img {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+.portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.portfolio-info .preview-link {
+  position: absolute;
+  left: calc(50% - 40px);
+  font-size: 26px;
+  top: calc(50% - 14px);
+  color: #fff;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+.portfolio-info .preview-link:hover {
+  color: #feb900;
+}
+
+.portfolio-info .details-link {
+  position: absolute;
+  top: calc(50% - 14px);
+  color: #fff;
+  transition: 0.3s;
+}
+.portfolio-info .details-link:hover {
+  color: #feb900;
 }/*# sourceMappingURL=molecules.css.map */
