@@ -86,6 +86,7 @@
 @forward '03-organisms/footer/footer';
 @forward '03-organisms/constructions/constructions';
 @forward '03-organisms/tabs/tabs';
+@forward '03-organisms/altServices/altservices';
 
 // Templates.
 @forward '04-templates/default';
@@ -95,4 +96,21 @@
 .main {
   padding: 0 !important;
   border: none !important;
+}
+
+.content-header {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.block-page-title-block {
+  & h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    color: #080000;
+  }
 }

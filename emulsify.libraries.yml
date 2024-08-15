@@ -3,19 +3,28 @@ global:
     theme:
       components/style.css: {}
       css/bootstrap.min.css: {}
-      https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css: {}
       https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css:
         {}
       https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css:
         {}
-      https://unpkg.com/aos@2.3.1/dist/aos.css: {}
+      https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css:
+        {}
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css:
+        {}
+      https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css: {}
 
   js:
     https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js:
       {}
-    https://unpkg.com/aos@2.3.1/dist/aos.js: {}
-    https://code.jquery.com/jquery-1.11.0.min.js: {}
-    https://code.jquery.com/jquery-migrate-1.2.1.min.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}
+    https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js: {}
+    js/isotope.js: {}
+    https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: {}
+    js/testimonial.js: {}
+    https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js: {}
+    js/lightbox.js: {}
 
   dependencies:
     - core/jquery
@@ -37,10 +46,3 @@ tabs:
     dist/js/02-molecules/tabs/tabs.js: {}
   dependencies:
     - core/drupal
-# slick-slider:
-#   css:
-#     https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css: {}
-#     https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css:
-#       {}
-#   js:
-#     https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: {}

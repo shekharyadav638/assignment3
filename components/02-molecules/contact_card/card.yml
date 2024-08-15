@@ -1,6 +1,4 @@
 card__subheading: 'Address'
-card__body: 'A108 Adam Street'
-card__body2: 'New York, NY 535022'
-subheading_level: '3'
+card__body: 'A108 Adam Street, New York, NY 535022'
+subheading_level: '4'
 icon_src: 'bi bi-geo-alt'
-icon_clr: '#4154f1'

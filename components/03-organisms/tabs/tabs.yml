@@ -1,18 +1,15 @@
 items:
   - heading: 'Voluptatem dignissimos provident'
-    id: 'tab1'
-    label: 'feature1'
+    label: 'Modists'
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua.'
     image: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/features-1.jpg'
-    active_class: 'show active'
     list:
       - content: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       - content: 'Duis aute irure dolor in reprehenderit in voluptate velit.'
       - content: 'Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.'
 
   - heading: 'Neque exercitationem debitis'
-    id: 'tab2'
-    label: 'feature2'
+    label: 'Praesenti'
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua.'
     image: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/features-2.jpg'
     list:
@@ -21,8 +18,7 @@ items:
       - content: 'Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.'
 
   - heading: 'Voluptatibus commodi accusamu'
-    id: 'tab3'
-    label: 'feature3'
+    label: 'Explica'
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua.'
     image: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/features-3.jpg'
     list:
@@ -31,8 +27,7 @@ items:
       - content: 'Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.'
 
   - heading: 'Omnis fugiat ea explicabo sunt'
-    id: 'tab4'
-    label: 'feature4'
+    label: 'Nostrum'
     body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua.'
     image: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/features-4.jpg'
     list:

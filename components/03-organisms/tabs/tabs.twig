@@ -1,73 +1,32 @@
 <section id="features" class="features section">
   <div class="container">
-    <ul class="nav nav-tabs mb-3  row g-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"  id="pills-tab" role="tablist">
-      <li class="nav-item col-3" role="presentation">
-        <a
-          class="nav-link show active"
-          id="pills-tab1-tab"
-          data-bs-toggle="pill"
-          data-bs-target="#pills-tab1"
-          type="button"
-          role="tab"
-          aria-controls="pills-tab1"
-          aria-selected="true"
-        >
-          <h4>Modisit</h4>
-      </a>
-      </li>
-      <li class="nav-item col-3" role="presentation">
-        <a
-          class="nav-link"
-          id="pills-tab2-tab"
-          data-bs-toggle="pill"
-          data-bs-target="#pills-tab2"
-          type="button"
-          role="tab"
-          aria-controls="pills-tab2"
-          aria-selected="true"
-        >
-          <h4>Praesenti</h4>
-      </a>
-      </li>
-      <li class="nav-item col-3" role="presentation">
-        <a
-          class="nav-link"
-          id="pills-tab3-tab"
-          data-bs-toggle="pill"
-          data-bs-target="#pills-tab3"
-          type="button"
-          role="tab"
-          aria-controls="pills-tab3"
-          aria-selected="true"
-        >
-          <h4>Explica</h4>
-      </a>
-      </li>
-      <li class="nav-item col-3" role="presentation">
-        <a
-          class="nav-link"
-          id="pills-tab4-tab"
-          data-bs-toggle="pill"
-          data-bs-target="#pills-tab4"
-          type="button"
-          role="tab"
-          aria-controls="pills-tab4"
-          aria-selected="true"
-        >
-          <h4>Nostrum</h4>
-      </a>
-      </li>
+    <ul class="nav nav-tabs mb-3 row g-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" id="pills-tab" role="tablist">
+      {% for tab in items %}
+        <li class="nav-item col-3" role="presentation">
+          <a
+            class="nav-link {% if loop.first %}show active{% endif %}"
+            id="pills-tab{{ loop.index }}-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-tab{{ loop.index }}"
+            type="button"
+            role="tab"
+            aria-controls="pills-tab{{ loop.index }}"
+            aria-selected="true"
+          >
+            <h4>{{ tab.label }}</h4>
+          </a>
+        </li>
+      {% endfor %}
     </ul>
-    
+
     <div class="tab-content" id="pills-tabContent">
       {% for tab in items %}
         {% include "@molecules/accordion/accordion.twig" with {
           card_heading: tab.heading,
-          id: tab.id,
-          label: tab.label,
+          id: "tab" ~ loop.index,
           card_body: tab.body,
           icon_src: 'bi bi-check2-all',
-          active_class: tab.active_class,
+          active_class: loop.first ? 'show active' : '',
           img_src: tab.image,
           lists: tab.list
         }%}

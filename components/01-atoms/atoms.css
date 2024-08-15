@@ -456,6 +456,7 @@ pre {
 .btnn--primary:hover {
   background: #feb900;
   transition: 0.3s;
+  color: #ffffff;
 }
 .btnn--secondary {
   background: #feb900;
@@ -467,6 +468,7 @@ pre {
 .btnn--secondary:hover {
   background: #ffc934;
   transition: 0.3s;
+  color: #ffffff;
 }
 
 .underline {

@@ -20,7 +20,7 @@
     </div>
   </div>
 
-    <div class="carousel slide" data-bs-ride = "carousel" data-bs-interval = "1500">
+    <div id = "hero-carousel" class="carousel slide" data-bs-ride = "carousel" data-bs-interval = "1500">
         {% for image in images %}
             <div class="carousel-item {% if loop.first %}active{% endif %}">
                 {% include "@atoms/images/image/_image.twig" with {

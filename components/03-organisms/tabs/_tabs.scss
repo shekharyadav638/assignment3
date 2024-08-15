@@ -10,7 +10,7 @@
     cursor: pointer;
     height: 100%;
     border: 0;
-    border-bottom: 4px solid color-mix(in srgb, #364d59, transparent 90%);
+    border-bottom: 4px solid color-mix(in srgb, #364d59, transparent 90%) !important;
 
     & h4 {
       font-size: 18px;
@@ -19,8 +19,9 @@
     }
 
     &.active {
-      background-color: #ffffff;
-      border-color: #feb900;
+      background-color: #ffffff !important;
+      border: 0 !important;
+      border-bottom: 4px solid #feb900 !important;
     }
   }
 }
