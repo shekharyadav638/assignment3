@@ -1,5 +1,6 @@
-{% set titleMain = content.field_constructions_heading %}
-{% set text = content.field_constructions_body %}
+{% set titleMain = content.field_constructions_heading[0]["#context"].value %}
+{% set text = content.field_constructions_body[0]["#text"] %}
+
 
 {% set cards = [] %}
 

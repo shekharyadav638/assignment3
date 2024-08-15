@@ -1,9 +1,11 @@
 <form action="#" method="post" class="php-email-form">
-  <h4>Get a quote</h4>
-  <p>
-    Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum
-    repellendus enim linead sero park flows.
-  </p>
+  {% include "@atoms/text/headings/_heading.twig" with {
+    heading_level: '4',
+    heading: card__subheading,
+  } %}
+  {% include "@atoms/text/text/01-paragraph.twig" with {
+    paragraph_content: card__body,
+  } %}
   <div class="row gy-3">
     <div class="col-12">
       <input
@@ -51,7 +53,7 @@
     <div class="col-12 text-center">
       {% include "@atoms/button_demo/buttons.twig" with { 
         button_modifiers: 'btnn--secondary',
-        button__content: 'Get a quote',
+        button__content: btn_content,
         button_url: '#',
       } %}
     </div>

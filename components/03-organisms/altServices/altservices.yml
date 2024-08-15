@@ -1,0 +1,21 @@
+heading: 'Enim quis est voluptatibus aliquid consequatur'
+body: 'Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus.
+  Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed
+  facere corporis dolores excepturi'
+
+src: 'https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/features-3-2.jpg'
+alt_text: 'alt-services'
+
+cards:
+  - heading: 'Lorem Ipsum'
+    body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
+    icon: 'bi bi-easel flex-shrink-0'
+  - heading: 'Lorem Ipsum'
+    body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
+    icon: 'bi bi-easel flex-shrink-0'
+  - heading: 'Lorem Ipsum'
+    body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
+    icon: 'bi bi-easel flex-shrink-0'
+  - heading: 'Lorem Ipsum'
+    body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
+    icon: 'bi bi-easel flex-shrink-0'

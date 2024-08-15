@@ -1,5 +1,3 @@
-import Isotope from 'isotope-layout';
-
 document.addEventListener('DOMContentLoaded', () => {
   const iso = new Isotope('.isotope-container', {
     itemSelector: '.portfolio-item',

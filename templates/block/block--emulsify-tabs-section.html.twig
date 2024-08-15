@@ -1,0 +1,36 @@
+{% set tabs = [] %}
+
+{% for value in content["field_tabs_tab"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_tabs_card_title.value %}
+    {% set body = paragraph.field_tabs_card_body.value %}
+    {% set img = paragraph.field_tabs_card_img.entity.uri.value %}
+    {% set imgsrc = file_url(img) %}
+    {% set tab_label = paragraph.field_tabs_card_label.value %}
+    
+    {% set list = [] %}
+    {% for item in paragraph.field_tabs_card_list_items %}
+        {% set text = item.entity.field_tabs_card_list_item_conten.value %}
+        {% set list = list|merge([
+            {
+              'content': text
+            }
+          ]) %}
+    {% endfor %}
+
+    {% set tabs = tabs|merge([
+        {
+          'image': imgsrc,
+          'label': tab_label,
+          'title': heading,
+          'body': body,
+          'heading': heading,
+          'list': list
+        }
+      ]) %}
+
+{% endfor %}
+
+{% include "@organisms/tabs/tabs.twig" with {
+    items:tabs
+}%}
