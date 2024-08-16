@@ -1,0 +1,28 @@
+{% set title = content.field_testimonials_heading[0]["#context"].value %}
+{% set text = content.field_testimonials_body[0]["#text"] %}
+
+{% set cards = [] %}
+{% for value in content["field_testimonials_card"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_testimonial_card_name.value %}
+    {% set role = paragraph.field_testimonial_card_role.value %}
+    {% set body = paragraph.field_testimonial_card_body.value %}
+    {% set img = paragraph.field_testimonial_card_img.entity.uri.value %}
+    {% set imgsrc = file_url(img) %}
+
+    {% set cards = cards|merge([
+        {
+          'image': imgsrc,
+          'name': heading,
+          'body': body,
+          'role': role,
+        }
+      ]) %}
+
+{% endfor %}
+
+{% include "@organisms/testimonials/testimonials.twig" with {
+    heading: title,
+    body: text,
+    items: cards
+}%}

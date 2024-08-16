@@ -1,0 +1,28 @@
+{{ attach_library('emulsify/Hero') }}
+{{ attach_library('emulsify/slick-slider') }}
+
+{% set heading = content.field_hero_titke %}
+{% set body = content.field_hero_body %}
+{% set btn_text = content.field_hero_btn[0]["#title"] %}
+{% set images = [] %}
+
+{% for value in content["field_hero_img"]["#items"] %}
+    {% set img = value.entity.uri.value %}
+    {% set imgsrc = file_url(img) %}
+    
+    {% set images = images|merge([
+      {
+        'src': imgsrc,
+      }
+    ]) %}
+{% endfor %}
+
+
+{% include "@organisms/hero/hero.twig" with {
+    hero_card_heading: heading,
+    hero_card_text: body,
+    hero_card_btn_text: btn_text,
+    hero_card_btn_url: '#',
+    hero_card_btn_class: 'btnn--primary',
+    images: images
+}%}

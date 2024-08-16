@@ -17,7 +17,7 @@ global:
   js:
     https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js:
       {}
-    https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}
+    # https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: {}
     https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js: {}
     js/isotope.js: {}
     https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js: {}
@@ -25,10 +25,8 @@ global:
     js/testimonial.js: {}
     https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js: {}
     js/lightbox.js: {}
-
   dependencies:
     - core/jquery
-    - slick-slider
 
 main-menu:
   js:

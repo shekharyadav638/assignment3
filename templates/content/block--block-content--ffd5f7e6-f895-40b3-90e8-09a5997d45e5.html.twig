@@ -1,0 +1,34 @@
+{% set title = content.field_posts_title[0]["#context"].value %}
+{% set text = content.field_posts_text[0]["#text"] %}
+
+{% set cards = [] %}
+{% for value in content["field_post"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_posts_card_name.value %}
+    {% set topic = paragraph.field_posts_card_topic.value %}
+    {% set body = paragraph.field_posts_card_desc.value %}
+    {% set img = paragraph.field_posts_card_img.entity.uri.value %}
+    {% set imgsrc = file_url(img) %}
+
+    {% set link_url = paragraph.field_posts_card_link[0].uri %}
+    {% set link_text = paragraph.field_posts_card_link[0].title %}
+
+
+    {% set cards = cards|merge([
+        {
+          'image': imgsrc,
+          'name': heading,
+          'body': body,
+          'topic': topic,
+          'url': link_url,
+          'link_text': link_text 
+        }
+      ]) %}
+
+{% endfor %}
+
+{% include "@organisms/posts/posts.twig" with {
+    card_heading: title,
+    body: text,
+    items: cards
+}%}
