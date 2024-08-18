@@ -3848,6 +3848,10 @@ pre {
   margin: 0 !important;
 }
 
+.header {
+  margin: 0 !important;
+}
+
 .content-header {
   background-color: #ffffff;
   padding: 20px 0;
