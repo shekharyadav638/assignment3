@@ -1,0 +1,32 @@
+{% set title = content.field_features_subheading[0]["#text"] %}
+{% set body = content.field_features_body[0]["#text"] %}
+{% set img = content["field_features_img"]["#items"].entity.uri.value %}
+{% set imgsrc = file_url(img) %}
+
+
+{% set cards = [] %}
+{% for value in content["field_features_card"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_features_paragraph_title.value %}
+    {% set body = paragraph.field_features_paragraph_body.value %}
+    {% set iconsrc = paragraph.field_features_paragraph_icon[0].value %}
+
+    {% set cards = cards|merge([
+        {
+          'icon': iconsrc,
+          'heading': heading,
+          'text': body,
+        }
+      ]) %}
+
+{% endfor %}
+
+
+
+{% include "@organisms/features/features.twig" with {
+    src: imgsrc,
+    alt: img_alt,
+    card_heading: title,
+    feature_body: body,
+    cards: cards,
+}%}

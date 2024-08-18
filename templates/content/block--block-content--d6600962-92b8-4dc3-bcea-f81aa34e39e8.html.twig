@@ -1,0 +1,30 @@
+<!-- {{ attach_library('assignment/isotope') }} -->
+
+{% set headingMain = content.field_projects_heading[0]["#context"].value %}
+{% set text = content.field_projects_body[0]["#text"] %}
+
+{% set images = [] %}
+{% for value in content["field_projects_images"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_projects_card_title.value %}
+    {% set body = paragraph.field_projects_card_description.value %}
+    {% set img = paragraph.field_projects_card_img.entity.uri.value %}
+    {% set imgsrc = file_url(img) %}
+    {% set type = paragraph.field_projects_card_type[0].value %}  
+
+    {% set images = images|merge([
+        {
+          'img': imgsrc,
+          'title': heading,
+          'description': body,
+          'type': type,
+        }
+      ]) %}
+
+{% endfor %}
+
+{% include "@organisms/projects/projects.twig" with {
+    heading: headingMain,
+    body: text,
+    cards: images
+}%}

@@ -1,0 +1,30 @@
+{% set titleMain = content.field_constructions_heading[0]["#context"].value %}
+{% set text = content.field_constructions_body[0]["#text"] %}
+
+
+{% set cards = [] %}
+
+{% for value in content["field_constructions_card"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_construction_card_heading.value %}
+    {% set body = paragraph.field_construction_card_body.value %}
+    {% set img = paragraph.field_construction_card_img.entity.uri.value %}
+    {% set imgsrc = file_url(img) %}
+
+    {% set cards = cards|merge([
+        {
+          'img': imgsrc,
+          'title': heading,
+          'body': body,
+        }
+      ]) %}
+
+{% endfor %}
+
+
+
+{% include "@organisms/constructions/constructions.twig" with {
+    heading : titleMain,
+    body : text,
+    cards: cards
+} %}

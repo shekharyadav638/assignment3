@@ -1,0 +1,10 @@
+{% set heading = content.field_getstarted_title %}
+{% set text1 = content.field_getstarted_body %}
+{% set text2 = content.field_getstarted_body2 %}
+
+
+{% include "@organisms/get_started/get_started.twig" with {
+    heading: heading,
+    body1: text1,
+    body2: text2
+} %}
