@@ -1,0 +1,22 @@
+{% set cards = [] %}
+{% for value in content["field_contact_details"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_features_paragraph_title.value %}
+    {% set body = paragraph.field_features_paragraph_body.value %}
+    {% set iconsrc = paragraph.field_features_paragraph_icon[0].value %}
+
+    {% set cards = cards|merge([
+        {
+          'src': iconsrc,
+          'sub': heading,
+          'address': body,
+        }
+      ]) %}
+
+{% endfor %}
+
+
+
+{% include "@organisms/contactus/contactus.twig" with {
+    items: cards,
+}%}

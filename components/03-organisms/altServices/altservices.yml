@@ -10,12 +10,15 @@ cards:
   - heading: 'Lorem Ipsum'
     body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
     icon: 'bi bi-easel flex-shrink-0'
+
   - heading: 'Lorem Ipsum'
     body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
     icon: 'bi bi-easel flex-shrink-0'
+
   - heading: 'Lorem Ipsum'
     body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
     icon: 'bi bi-easel flex-shrink-0'
+
   - heading: 'Lorem Ipsum'
     body: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias'
     icon: 'bi bi-easel flex-shrink-0'

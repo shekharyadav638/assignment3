@@ -1,0 +1,29 @@
+{% set heading = content.field_aboutus_title[0]["#text"] %}
+{% set subheading = content.field_aboutus_subheading[0]["#context"].value %}
+{% set text1 = content.field_aboutus_body1[0]["#text"] %}
+{% set text2 = content.field_aboutus_body2[0]["#text"] %}
+{% set url = content.field_aboutus_btn[0]["#url"].uri %}
+{% set img = content["field_aboutus_img"]["#items"].entity.uri.value %}
+{% set imgsrc = file_url(img) %}
+
+{% set list = [] %}
+
+{% for item in content.field_aboutus_list["#items"] %}
+    {% set text = item.entity.field_tabs_card_list_item_conten.value %}
+    {% set list = list|merge([
+        {
+            'content': text
+        }
+    ]) %}
+{% endfor %}
+
+
+{% include "@organisms/who/who.twig" with {
+    heading: heading,
+    subheading: subheading,
+    body1: text1,
+    body2: text2,
+    list: list,
+    link: url,
+    img: imgsrc
+}%}

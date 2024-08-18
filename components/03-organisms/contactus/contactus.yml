@@ -1,6 +1,6 @@
 items:
   - sub: 'Address'
-    address: 'A108 Adam Street'
+    address: 'A108 Adam Street, New York, NY 535022'
     src: 'bi bi-geo-alt'
 
   - sub: 'Call Us'
