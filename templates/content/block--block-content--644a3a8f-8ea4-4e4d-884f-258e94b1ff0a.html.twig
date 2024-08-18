@@ -1,0 +1,16 @@
+{% set img = content["field_page_title_img"]["#items"].entity.uri.value %}
+{% set imgsrc = file_url(img) %}
+
+{% if not is_front %}
+  <div class="page-title dark-background" style="background-image: url('{{imgsrc}}');">
+    <div class="container position-relative">
+      <h1>Services</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="/drupal_website/">Home</a></li>
+          <li class="current">Services</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+{% endif %}
