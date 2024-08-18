@@ -1,5 +1,5 @@
 <section id="blog" class="posts section">
-    <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+    <div class="container section-title">
         {% include "@atoms/text/headings/_heading.twig" with {
             heading_level: '2',
             heading: card_heading,
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row gy-5">    
             {% for item in items %}
-                <div class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-xl-4 col-md-6">
                     {% include "@molecules/blog/blog.twig" with {
                         img_src: item.image,
                         img_alt: 'post-image',

@@ -1,0 +1,25 @@
+{% set title = content.field_stats_title[0]["#context"].value %}
+{% set text = content.field_stats_body[0]["#text"] %}
+
+{% set cards = [] %}
+{% for value in content["field_stats_card"]["#items"] %}
+    {% set paragraph = value.entity %}
+    {% set heading = paragraph.field_features_paragraph_title.value %}
+    {% set body = paragraph.field_features_paragraph_body.value %}
+    {% set iconsrc = paragraph.field_features_paragraph_icon[0].value %}
+
+    {% set cards = cards|merge([
+        {
+          'icon': iconsrc,
+          'num': heading,
+          'body': body,
+        }
+      ]) %}
+
+{% endfor %}
+
+{% include "@organisms/stats/stats.twig" with {
+    heading: title,
+    body: text,
+    items: cards,
+}%}
